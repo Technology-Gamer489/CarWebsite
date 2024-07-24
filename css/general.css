@@ -74,3 +74,20 @@ nav a:hover {
 .group-three-dropdown:hover .dropdown-content {
     display: block;
 }
+.group-four-dropdown {
+    text-align: left;
+    overflow: hidden;
+}
+.group-four-dropdown .dropdown-button {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.group-four-dropdown:hover .dropdown-content {
+    display: block;
+}
