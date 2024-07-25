@@ -91,3 +91,37 @@ nav a:hover {
 .group-four-dropdown:hover .dropdown-content {
     display: block;
 }
+.group-one-dropdown {
+    text-align: left;
+    overflow: hidden;
+}
+.group-one-dropdown .dropdown-button {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.group-one-dropdown:hover .dropdown-content {
+    display: block;
+}
+.group-two-dropdown {
+    text-align: left;
+    overflow: hidden;
+}
+.group-two-dropdown .dropdown-button {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.group-two-dropdown:hover .dropdown-content {
+    display: block;
+}
