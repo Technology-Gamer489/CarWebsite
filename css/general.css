@@ -35,6 +35,9 @@ nav a {
 nav a:hover {
     text-decoration: underline;
 }
+.active {
+    text-decoration: underline;
+}
 .group-three-dropdown {
     text-align: left;
     overflow: hidden;
@@ -141,4 +144,30 @@ nav a:hover {
 }
 .group-b-dropdown:hover .dropdown-content {
     display: block;
+}
+footer {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin: auto;  
+    padding: auto;
+    align-items: center;
+}
+footer ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+footer a {
+    flex: 1;
+    text-align: center;
+    margin: 0.30em;
+    padding: 0.30em;
+    border: none;
+    text-decoration: none;
+    color: white;
+}
+footer a:hover {
+    text-decoration: underline;
 }
