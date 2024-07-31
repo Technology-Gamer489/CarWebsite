@@ -6,7 +6,7 @@ body {
     max-width: 100%;
 }
 nav {
-    padding: 0 15px;
+    padding: 0 1rem;
     max-width: 100%;
 }
 a {
@@ -56,7 +56,7 @@ nav a:hover {
     display: none;
     position: absolute;
     background-color: #bfbfbf;
-    min-width: 160px;
+    min-width: fit-content;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
 }
@@ -123,5 +123,22 @@ nav a:hover {
     margin: 0;
 }
 .group-two-dropdown:hover .dropdown-content {
+    display: block;
+}
+.group-b-dropdown {
+    text-align: left;
+    overflow: hidden;
+}
+.group-b-dropdown .dropdown-button {
+    font-size: 16px;  
+    border: none;
+    outline: none;
+    color: white;
+    padding: inherit;
+    background-color: inherit;
+    font-family: inherit;
+    margin: 0;
+}
+.group-b-dropdown:hover .dropdown-content {
     display: block;
 }
