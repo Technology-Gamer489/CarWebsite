@@ -171,3 +171,9 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+h2, h3 {
+    text-align: center;
+}
+a {
+    text-decoration: underline;
+}
