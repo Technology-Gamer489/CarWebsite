@@ -177,3 +177,7 @@ h2, h3 {
 a {
     text-decoration: underline;
 }
+.image-container {
+    display: flex;
+    justify-content: space-between;
+}
