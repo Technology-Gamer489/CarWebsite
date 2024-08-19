@@ -177,7 +177,16 @@ h2, h3 {
 a {
     text-decoration: underline;
 }
-.image-container {
+.main-image-container {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+}
+.child-container {
+    width: 50%;
+    height: 50%;
+    object-fit: contain;
+    padding-bottom: 1rem
 }
