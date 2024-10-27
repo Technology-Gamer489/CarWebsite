@@ -201,6 +201,9 @@ a {
     margin-left: auto;
     cursor: pointer;
 }
+.modal-trigger:hover {
+    text-decoration: underline;
+}
 .modal {
     position: fixed;
     left: 0;
