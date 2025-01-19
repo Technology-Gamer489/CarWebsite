@@ -177,79 +177,43 @@ h2, h3 {
 a {
     text-decoration: underline;
 }
-/* Working on a better solution to show the pictures */
-/*
-.main-image-container {
+/* Image gallery */
+.image-container {
+    max-width: 150rem;
+	margin: 0 auto;
+	padding: 0 2rem 2rem;
+}
+.image-gallery {
     display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
+	flex-wrap: wrap;
+	/* Compensate for excess margin on outer gallery flex items */
+	margin: -1rem -1rem;
 }
-.child-container {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    padding-bottom: 1rem
+.gallery-item {
+    /* Minimum width of 24rem and grow to fit available space */
+	flex: 1 0 24rem;
+	/* Margin value should be half of grid-gap value as margins on flex items don't collapse */
+	margin: 1rem;
+	overflow: hidden;
 }
-*/
-.car-slides {
-    display: none;
+.gallery-image {
+    display: block;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+    cursor: pointer;
 }
-.car-images {
-    vertical-align: middle; 
-    width: 100%;
-}
-/* Slideshow for pictures */
-.slideshow-container {
-    max-width: 100rem;
-    position: relative;
-    margin: auto;
-}
-.caption-text {
-    color: #ffffff;
-    font-size: 1.3rem;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
-}
-/* Number of the image within the list */
-.image-number {
-    color: #ffffff;
-    font-size: 1rem;
-    padding: 8px 12px;
-    position: absolute;
-    top: 0;
-}
-.indicator-container {
-    text-align: center;
-}
-/* Indicators to show visual list of images and which is active */
-.image-indicator {
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #ffffff;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
-}
-.active-image {
-    background-color: #D8F1FF;
-}
-.fade {
-    animation-name: fade;
-    animation-duration: 2.5s;
-}
-@keyframes fade {
-    from {opacity: .2} 
-    to {opacity: 1}
-}  
-@media only screen and (max-width: 600px) {
-    .caption-text {
-        font-size: 0.8rem
-    }
+/* If the browser only supports grid, the below code will run */
+@supports (display: grid) {
+	.image-gallery {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(24rem, 1fr));
+		grid-gap: 2rem;
+	}
+	.image-gallery,
+	.gallery-item {
+		margin: 0;
+	}
 }
 /* Modal CSS below */
 .modal-trigger {
