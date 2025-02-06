@@ -145,6 +145,40 @@ nav a:hover {
 .group-b-dropdown:hover .dropdown-content {
     display: block;
 }
+/* Accessible navbar */
+.nav-toggle {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5em;
+    cursor: pointer;
+    margin-left: auto;
+}
+.nav-open {
+    display: flex;
+    flex-direction: column;
+}
+@media (max-width: 1165px) {
+    .nav-toggle {
+        display: block;
+    }
+    .nav-container {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+    }
+    .nav-container.nav-open {
+        display: flex;
+    }
+    .nav-container li {
+        width: 100%;
+        text-align: center;
+    }
+    .modal-trigger {
+        margin: 0 auto;
+    }
+}
 footer {
     display: flex;
     justify-content: space-between;
@@ -201,7 +235,6 @@ a {
 	width: 100%;
 	height: 100%;
 	object-fit: cover;
-    cursor: pointer;
 }
 /* If the browser only supports grid, the below code will run */
 @supports (display: grid) {
@@ -222,7 +255,7 @@ a {
     background-color: #89241d;
     color: white;
     border: none;
-    padding: 0.20em;
+    padding: 0.40em;
     margin-left: auto;
     cursor: pointer;
 }
@@ -284,4 +317,89 @@ a {
     visibility: visible;
     transform: scale(1.0);
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
+}
+/* Code for different accessibility features */
+.calibri-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#calibri-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.verdana-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#verdana-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.times-new-roman-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#times-new-roman-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.helvetica-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#helvetica-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.comic-sans-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#comic-sans-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.reset-font-style-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#reset-font-style-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
 }

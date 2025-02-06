@@ -9,6 +9,9 @@
     </head>
     <body>
         <nav>
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <i class="fa fa-bars"></i>
+            </button>
             <ul class="nav-container">
                 <li><a href="index.html" class="active">Home</a></li>
                 <li><a href="about.html">About the website</a></li>
@@ -141,7 +144,14 @@
                         <span class="close-button">&times;</span>
                         <h2>Accessibility Options</h2>
                         <p>If you need to change the way the website looks for whatever reason, here are some options to choose from.</p>
-                    
+                        <h3>Changing the font style</h3>
+                        <p>Click any button below to change the font style to one that you prefer. The font can also be reset back to the original one.</p>
+                        <button type="button" class="calibri-font-button" id="calibri-font-button" name="calibri-font" onclick="calibri_font()">Calibri font</button>
+                        <button type="button" class="verdana-font-button" id="verdana-font-button" name="verdana-font" onclick="verdana_font()">Verdana font</button>
+                        <button type="button" class="times-new-roman-button" id="times-new-roman-button" name="times-new-roman-font" onclick="times_new_roman_font()">Times New Roman font</button>
+                        <button type="button" class="helvetica-font-button" id="helvetica-font-button" name="helvetica-font" onclick="helvetica_font()">Helvetica font</button>
+                        <button type="button" class="comic-sans-button" id="comic-sans-button" name="comic-sans-font" onclick="comic_sans_font()">Comic Sans font</button>
+                        <button type="button" class="reset-font-style-button" id="reset-font-style-button" name="reset-font-style" onclick="reset_font_style()">Reset font style</button>
                     </div>
                 </div>
             </ul>
@@ -199,6 +209,7 @@
                     <li>A way to make the cars move within the pictures</li>
                     <li>Videos of laps within certain cars</li>
                     <li>Look at seeing if any of the older games might be considered (or as separate projects)</li>
+                    <li>Look to add animations for the pictures and other elements of each page (if applicable)</li>
                 </ul>
                 </p>
             </section>
@@ -212,5 +223,10 @@
             </ul>
         </footer>
         <script src="js/accessibility-modal.js"></script>
+        <script>
+            document.querySelector('.nav-toggle').addEventListener('click', () => {
+                document.querySelector('.nav-container').classList.toggle('nav-open');
+            });
+        </script>
     </body>
 </html>
