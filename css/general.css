@@ -282,7 +282,7 @@ a {
     background-color: white;
     color: black;
     padding: 1rem 1.5rem;
-    max-width: 50%;
+    max-width: 65%;
     max-height: 90%;
     border-radius: 0.5rem;
     overflow-y: scroll;
@@ -295,7 +295,7 @@ a {
     background-color: white;
     color: black;
     padding: 1rem 1.5rem;
-    max-width: 50%;
+    max-width: 65%;
     max-height: 90%;
     border-radius: 0.5rem;
     overflow-y: scroll;
@@ -319,6 +319,10 @@ a {
     transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
 /* Code for different accessibility features */
+.font-button-container {
+    display: flex;
+    justify-content: space-between;
+}
 .calibri-font-button {
     background-color: #89241d;
     color: white;
