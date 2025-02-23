@@ -78,3 +78,82 @@ function reset_font_style() {
     change_font_style == 0;
     location.reload();
 }
+
+// JavaScript code to change the font size of the page
+var change_font_size = 0;
+
+function update_font_size(size) {
+    document.body.style.fontSize = size;
+    const dropdowns = document.querySelectorAll(".dropdown-content a");
+    dropdowns.forEach(dropdown => {
+        dropdown.style.fontSize = size;
+    });
+    const navLinks = document.querySelectorAll("nav a");
+    navLinks.forEach(navLink => {
+        navLink.style.fontSize = size;
+    });
+    const dropdownButtons = document.querySelectorAll(".dropdown-button");
+    dropdownButtons.forEach(button => {
+        button.style.fontSize = size;
+    });
+    const modalButtons = document.querySelectorAll(".modal-content button");
+    modalButtons.forEach(button => {
+        button.style.fontSize = size;
+    });
+}
+
+function small_font() {
+    update_font_size("0.8em");
+    change_font_size == 1;
+    sessionStorage.setItem("small-font-button", change_font_size);
+}
+function medium_font() {
+    update_font_size("1.2em");
+    change_font_size == 2;
+    sessionStorage.setItem("medium-font-button", change_font_size);
+}
+function large_font() {
+    update_font_size("1.5em");
+    change_font_size == 3;
+    sessionStorage.setItem("large-font-button", change_font_size);
+}
+function check_font_size() {
+    const small = sessionStorage.getItem("small-font-button");
+    const medium = sessionStorage.getItem("medium-font-button");
+    const large = sessionStorage.getItem("large-font-button");
+
+    if (small == 1) {
+        small_font();
+    } else if (medium == 2) {
+        medium_font();
+    } else if (large == 3) {
+        large_font();
+    } else {
+        document.body.style.fontSize = "1em";
+        const dropdowns = document.querySelectorAll(".dropdown-content a");
+        dropdowns.forEach(dropdown => {
+            dropdown.style.fontSize = "1em";
+        });
+        const navLinks = document.querySelectorAll("nav a");
+        navLinks.forEach(navLink => {
+            navLink.style.fontSize = "1em";
+        });
+        const dropdownButtons = document.querySelectorAll(".dropdown-button");
+        dropdownButtons.forEach(button => {
+            button.style.fontSize = "1em";
+        });
+        const modalButtons = document.querySelectorAll(".modal-content button");
+        modalButtons.forEach(button => {
+            button.style.fontSize = "1em";
+        });
+    }
+}
+
+// Call the function on page load
+window.onload = check_font_size;
+
+// Function that will reset the font size of the page and reload the page again
+function reset_font_size() {
+    change_font_size == 0;
+    location.reload();
+}

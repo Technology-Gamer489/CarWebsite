@@ -287,6 +287,9 @@ a {
     border-radius: 0.5rem;
     overflow-y: scroll;
 }
+.modal-content button {
+    font-size: inherit;
+}
 #modal-content {
     position: absolute;
     top: 50%;
@@ -401,6 +404,80 @@ a {
     cursor: pointer;
 }
 #reset-font-style-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.font-size-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+.small-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#small-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.medium-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#medium-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.large-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#large-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.extra-large-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#extra-large-font-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.reset-font-size-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#reset-font-size-button {
     background-color: #89241d;
     color: white;
     padding: 5px 5px;
