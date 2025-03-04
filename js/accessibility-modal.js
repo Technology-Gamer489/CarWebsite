@@ -157,3 +157,62 @@ function reset_font_size() {
     change_font_size == 0;
     location.reload();
 }
+
+// JavaScript code to change the colour scheme of the page
+var change_colour_scheme = 0;
+function dark_mode() {
+    document.body.style.backgroundColor = "#000";
+    document.body.style.color = "#fff";
+    change_colour_scheme == 1;
+    sessionStorage.setItem("dark-mode-button", change_colour_scheme);
+    document.querySelectorAll("a").forEach(link => {
+        link.style.color = "#fff";
+    });
+    document.querySelectorAll(".dropdown-content a").forEach(dropdown => {
+        dropdown.style.color = "#000";
+    });
+    document.querySelectorAll(".dropdown-content").forEach(dropdown => {
+        dropdown.style.backgroundColor = "#fff";
+    });
+}
+function light_mode() {
+    document.body.style.backgroundColor = "#fff";
+    document.body.style.color = "#000";
+    change_colour_scheme == 2;
+    sessionStorage.setItem("light-mode-button", change_colour_scheme);
+    document.querySelectorAll("a").forEach(link => {
+        link.style.color = "#000";
+    });
+    const dropdownButtons = document.querySelectorAll(".dropdown-button");
+        dropdownButtons.forEach(button => {
+            button.style.color = "#000";
+        });
+    document.querySelectorAll(".dropdown-content a").forEach(dropdown => {
+        dropdown.style.color = "#000";
+    });
+    document.querySelectorAll(".dropdown-content").forEach(dropdown => {
+        dropdown.style.backgroundColor = "#fff";
+    });
+}
+function check_colour_scheme() {
+    const dark = sessionStorage.getItem("dark-mode-button");
+    const light = sessionStorage.getItem("light-mode-button");
+
+    if (dark == 1) {
+        dark_mode();
+    } else if (light == 2) {
+        light_mode();
+    } else {
+        document.body.style.backgroundColor = "#4f4f4f";
+        document.body.style.color = "#fff";
+    }
+}
+
+// Call the function on page load
+window.onload = check_colour_scheme;
+
+// Function that will reset the colour scheme of the page and reload the page again
+function reset_colour_scheme() {
+    change_colour_scheme == 0;
+    location.reload();
+}

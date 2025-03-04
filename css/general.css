@@ -484,3 +484,63 @@ a {
     text-decoration: none;
     cursor: pointer;
 }
+.colour-scheme-button-container {
+    display: flex;
+    justify-content: space-between;
+}
+.dark-mode-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#dark-mode-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.dark-mode-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#dark-mode-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.light-mode-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#light-mode-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+.reset-colour-scheme-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+#reset-colour-scheme-button {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
