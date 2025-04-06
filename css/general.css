@@ -159,7 +159,7 @@ nav a:hover {
     display: flex;
     flex-direction: column;
 }
-@media (max-width: 1165px) {
+@media (max-width: 1170px) {
     .nav-toggle {
         display: block;
     }
