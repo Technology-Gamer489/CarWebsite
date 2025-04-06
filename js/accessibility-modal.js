@@ -165,35 +165,115 @@ function dark_mode() {
     document.body.style.color = "#fff";
     change_colour_scheme == 1;
     sessionStorage.setItem("dark-mode-button", change_colour_scheme);
+
+    // Update all links
     document.querySelectorAll("a").forEach(link => {
         link.style.color = "#fff";
     });
-    document.querySelectorAll(".dropdown-content a").forEach(dropdown => {
-        dropdown.style.color = "#000";
+
+    document.querySelectorAll("dropdown-button").forEach(link => {
+        link.style.color = "#fff"; // Black text for visibility
     });
+    document.querySelectorAll("nav a").forEach(link => {
+        link.style.color = "#fff"; // Black text for visibility
+    });
+    document.querySelectorAll(".dropdown-button").forEach(link => {
+        link.style.color = "#fff"; // Black text for visibility
+    });
+
+    // Update dropdown links and background
+    document.querySelectorAll(".dropdown-content a").forEach(dropdown => {
+        dropdown.style.color = "#000"; // Black text for contrast
+        dropdown.style.backgroundColor = "#fff"; // White background
+    });
+
+    // Update dropdown container background
     document.querySelectorAll(".dropdown-content").forEach(dropdown => {
         dropdown.style.backgroundColor = "#fff";
     });
+
+    // Update hamburger icon for dark mode
+    const hamburger = document.querySelector(".nav-toggle");
+    if (hamburger) {
+        hamburger.style.color = "#fff"; // White icon for visibility
+    }
+
+    // Update form styles for dark mode
+    const forms = document.querySelectorAll("form");
+    forms.forEach(form => {
+        form.style.backgroundColor = "#000";
+        form.style.color = "#fff";
+        form.style.border = "1px solid #fff";
+    });
+
+    // Update labels, textareas, and inputs for dark mode
+    document.querySelectorAll("label").forEach(label => {
+        label.style.color = "#fff";
+    });
+    document.querySelectorAll("textarea, input").forEach(input => {
+        input.style.backgroundColor = "#333";
+        input.style.color = "#fff";
+        input.style.border = "1px solid #fff";
+    });
 }
+
 function light_mode() {
     document.body.style.backgroundColor = "#fff";
     document.body.style.color = "#000";
     change_colour_scheme == 2;
     sessionStorage.setItem("light-mode-button", change_colour_scheme);
+
+    // Update all links (including nav links)
     document.querySelectorAll("a").forEach(link => {
-        link.style.color = "#000";
+        link.style.color = "#000000"; // Black text for visibility
     });
-    const dropdownButtons = document.querySelectorAll(".dropdown-button");
-        dropdownButtons.forEach(button => {
-            button.style.color = "#000";
-        });
+
+    document.querySelectorAll("dropdown-button").forEach(link => {
+        link.style.color = "#000000"; // Black text for visibility
+    });
+    document.querySelectorAll("nav a").forEach(link => {
+        link.style.color = "#000"; // Black text for visibility
+    });
+    document.querySelectorAll(".dropdown-button").forEach(link => {
+        link.style.color = "#000"; // Black text for visibility
+    });
+
+    // Update dropdown links and background
     document.querySelectorAll(".dropdown-content a").forEach(dropdown => {
-        dropdown.style.color = "#000";
+        dropdown.style.color = "#000"; // Black text for visibility
+        dropdown.style.backgroundColor = "#f0f0f0"; // Light gray background for contrast
     });
+
+    // Update dropdown container background
     document.querySelectorAll(".dropdown-content").forEach(dropdown => {
-        dropdown.style.backgroundColor = "#fff";
+        dropdown.style.backgroundColor = "#f0f0f0"; // Light gray background
+    });
+
+    // Update hamburger icon for light mode
+    const hamburger = document.querySelector(".nav-toggle");
+    if (hamburger) {
+        hamburger.style.color = "#000"; // Black icon for visibility
+    }
+
+    // Update form styles for light mode
+    const forms = document.querySelectorAll("form");
+    forms.forEach(form => {
+        form.style.backgroundColor = "#fff";
+        form.style.color = "#000";
+        form.style.border = "1px solid #000";
+    });
+
+    // Update labels, textareas, and inputs for light mode
+    document.querySelectorAll("label").forEach(label => {
+        label.style.color = "#000";
+    });
+    document.querySelectorAll("textarea, input").forEach(input => {
+        input.style.backgroundColor = "#fff";
+        input.style.color = "#000";
+        input.style.border = "1px solid #000";
     });
 }
+
 function check_colour_scheme() {
     const dark = sessionStorage.getItem("dark-mode-button");
     const light = sessionStorage.getItem("light-mode-button");
