@@ -213,8 +213,16 @@ footer a:hover {
 h2, h3 {
     text-align: center;
 }
+h4 {
+    text-align: left;
+}
 a {
     text-decoration: underline;
+}
+ol {
+    text-align: left;
+    max-width: 100%;
+    list-style-type: none;
 }
 /* Image gallery */
 .image-container {
