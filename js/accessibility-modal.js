@@ -23,30 +23,35 @@ function calibri_font() {
     document.body.style.fontSize = "1em";
     change_font_style == 1;
     sessionStorage.setItem("calibri-font-button", change_font_style);
+    savePreference("calibri-font-button", 1);
 }
 function verdana_font() {
     document.body.style.fontFamily = "Verdana, sans-serif";
     document.body.style.fontSize = "1em";
     change_font_style == 2;
     sessionStorage.setItem("verdana-font-button", change_font_style);
+    savePreference("verdana-font-button", 2);
 }
 function times_new_roman_font() {
     document.body.style.fontFamily = "Times New Roman, serif";
     document.body.style.fontSize = "1em";
     change_font_style == 3;
     sessionStorage.setItem("times-new-roman-font-button", change_font_style);
+    savePreference("times-new-roman-font-button", 3);
 }
 function helvetica_font() {
     document.body.style.fontFamily = "Helvetica, sans-serif";
     document.body.style.fontSize = "1em";
     change_font_style == 4;
     sessionStorage.setItem("helvetica-font-button", change_font_style);
+    savePreference("helvetica-font-button", 4);
 }
 function comic_sans_font() {
     document.body.style.fontFamily = "Comic Sans MS, Comic Sans";
     document.body.style.fontSize = "1em";
     change_font_style == 5;
     sessionStorage.setItem("comic-sans-font-button", change_font_style);
+    savePreference("comic-sans-font-button", 5);
 }
 function check_font_style() {
     const calibri = sessionStorage.getItem("calibri-font-button");
@@ -106,16 +111,19 @@ function small_font() {
     update_font_size("0.8em");
     change_font_size == 1;
     sessionStorage.setItem("small-font-button", change_font_size);
+    savePreference("small-font-button", 1);
 }
 function medium_font() {
     update_font_size("1.2em");
     change_font_size == 2;
     sessionStorage.setItem("medium-font-button", change_font_size);
+    savePreference("medium-font-button", 2);
 }
 function large_font() {
     update_font_size("1.5em");
     change_font_size == 3;
     sessionStorage.setItem("large-font-button", change_font_size);
+    savePreference("large-font-button", 3);
 }
 function check_font_size() {
     const small = sessionStorage.getItem("small-font-button");
@@ -165,6 +173,7 @@ function dark_mode() {
     document.body.style.color = "#fff";
     change_colour_scheme == 1;
     sessionStorage.setItem("dark-mode-button", change_colour_scheme);
+    savePreference("dark-mode-button", 1);
 
     // Update all links
     document.querySelectorAll("a").forEach(link => {
@@ -222,6 +231,7 @@ function light_mode() {
     document.body.style.color = "#000";
     change_colour_scheme == 2;
     sessionStorage.setItem("light-mode-button", change_colour_scheme);
+    savePreference("light-mode-button", 2);
 
     // Update all links (including nav links)
     document.querySelectorAll("a").forEach(link => {
@@ -295,4 +305,11 @@ window.onload = check_colour_scheme;
 function reset_colour_scheme() {
     change_colour_scheme == 0;
     location.reload();
+}
+
+// Utility function to save preferences only if cookies are not declined
+function savePreference(key, value) {
+    if (!window.areCookiesDeclined()) {
+        sessionStorage.setItem(key, value);
+    }
 }

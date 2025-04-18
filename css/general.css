@@ -13,6 +13,77 @@ a {
     color: white;
     text-decoration: none;
 }
+.cookie-banner {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%; /* Ensures it spans the full width of the screen */
+    max-width: 100%; /* Prevents overflow */
+    background-color: rgba(0, 0, 0, 0.9);
+    color: white;
+    text-align: center;
+    padding: 15px;
+    z-index: 1000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box; /* Includes padding in width calculations */
+}
+.cookie-banner p {
+    margin: 0;
+    flex: 1;
+    text-align: left;
+    font-size: 1rem; /* Adjust font size for readability */
+}
+.cookie-banner a {
+    color: #00bcd4;
+    text-decoration: underline;
+}
+.accept-cookies {
+    background-color: #89241d;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: inherit;
+}
+.accept-cookies:hover {
+    text-decoration: underline; /* Matches the hover effect */
+}
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    .cookie-banner {
+        flex-direction: column; /* Stack elements vertically */
+        text-align: center;
+    }
+    .cookie-banner p {
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .cookie-buttons {
+        margin-left: 0;
+    }
+}
+.cookie-buttons {
+    display: flex;
+    gap: 1rem; /* Add spacing between buttons */
+}
+.decline-cookies {
+    background-color: #89241d; /* Matches the button background color */
+    color: white;
+    padding: 5px 10px;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 0;
+    font-size: inherit;
+}
+.decline-cookies:hover {
+    text-decoration: underline;
+}
 nav ul {
     display: flex;
     align-items: center;
